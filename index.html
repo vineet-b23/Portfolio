@@ -4,34 +4,50 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home | Vineet</title>
-  <link rel="icon" type="image/png" href="favicon.png">
+
+  <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-87Y32ZV6W3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-87Y32ZV6W3');
+    </script>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+
+  <!-- Global & Page CSS -->
+  <link rel="stylesheet" href="css/global.css">
+
+  <!-- Google Analytics (GA4) -->
+  <!-- Replace G-XXXXXXXXXX with your actual Measurement ID later -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+
+  <!-- Index-only animation -->
   <style>
-    .profile-pic.side {
-        width: 260px;
-        height: 260px;
-        border-radius: 50%;
-        object-fit: cover;
-        border: 4px solid rgba(255, 255, 255, 0.06);
-        box-shadow: 0 0 20px 5px gold;
-        animation: pulseGlow 2s infinite;
-        }
+    @keyframes pulseGlow {
+      0% { box-shadow: 0 0 10px 3px gold; }
+      50% { box-shadow: 0 0 25px 8px gold; }
+      100% { box-shadow: 0 0 10px 3px gold; }
+    }
 
-        @keyframes pulseGlow {
-        0% {
-            box-shadow: 0 0 10px 3px gold;
-        }
-        50% {
-            box-shadow: 0 0 25px 8px gold;
-        }
-        100% {
-            box-shadow: 0 0 10px 3px gold;
-        }
-        }
-
+    .profile-pic.pulse {
+      animation: pulseGlow 2s infinite;
+    }
   </style>
 </head>
+
 <body>
 
   <!-- Navbar -->
@@ -46,58 +62,136 @@
     </nav>
   </header>
 
-  <!-- About Section -->
   <main>
+
+    <!-- About Section -->
     <section class="section-pad about-grid">
       <div class="about-text">
         <h2>Welcome to My Portfolio</h2>
-        <p class="about-tagline">Driven by faith, powered by curiosity — building software to make an impact.</p>
-        <p class="about-para">I am passionate about AI, full-stack development, and problem-solving. I love turning ideas into projects that help people and glorify God. Scroll down to see my skills and achievements.</p>
+        <p class="about-tagline">
+          Driven by faith, powered by curiosity — building software to make an impact.
+        </p>
+        <p class="about-para">
+          Focused on clarity in both thought and execution.  
+          Experienced in shaping ideas into structured outcomes.  
+          Attentive to detail while maintaining a broader perspective.  
+          Building work that endures through precision and balance.  
+        </p>
       </div>
+
       <div class="about-pic">
-        <img src="profile.jpg" alt="Vineet — profile picture" class="profile-pic side">
+        <img src="assets/profile.jpg"
+             alt="Vineet — profile picture"
+             class="profile-pic side pulse">
       </div>
     </section>
 
     <!-- Skills Section -->
     <section class="section-pad skills">
+          <style>
+            /* Skills Ticker Animation */
+            .skills-ticker {
+              overflow: hidden;
+              width: 100%;
+              position: relative;
+              margin-top: 25px;
+            }
+
+            .skills-track {
+              display: flex;
+              gap: 40px;
+              width: max-content;
+              animation: skillsScroll 25s linear infinite;
+            }
+
+            .skill img {
+              height: 55px;
+              width: auto;
+              opacity: 0.95;
+              transition: transform 0.3s, filter 0.3s;
+            }
+
+
+            .skill img:hover {
+              transform: scale(1.15);
+              filter: drop-shadow(0 0 6px rgba(255, 215, 0, 0.6));
+            }
+
+
+            @keyframes skillsScroll {
+              0% {
+                transform: translateX(100%);
+              }
+              100% {
+                transform: translateX(-100%);
+              }
+            }
+
+            /* Mobile tweaks */
+            @media (max-width: 768px) {
+              .skills-track {
+                gap: 25px;
+              }
+
+              .skill img {
+                height: 45px;
+              }
+            }
+          </style>
+
       <h2>Skills</h2>
       <p class="muted">Tools & technologies I work with</p>
-      <div class="skills-grid">
-        <div class="skill"><img src="python.png" alt="Python logo"></div>
-        <div class="skill"><img src="js.png" alt="JavaScript logo"></div>
-        <div class="skill"><img src="html.png" alt="HTML logo"></div>
-        <div class="skill"><img src="django.png" alt="Django logo"></div>
-        <div class="skill"><img src="fast api.png" alt="FastAPI logo"></div>
-        <div class="skill"><img src="wireshark.png" alt="Wire Shark logo"></div>
-        <div class="skill"><img src="kalilinux.png" alt="kali Linux logo"></div>
-        <div class="skill"><img src="kivy.png" alt="Kivy logo"></div>
-        <div class="skill"><img src="burp.png" alt="Burpsuite logo"></div>
-        <div class="skill"><img src="canva.png" alt="Canva logo"></div>
+
+      <!-- Ticker wrapper (animation handled in index.css later) -->
+      <div class="skills-ticker">
+        <div class="skills-track">
+          <div class="skill"><img src="assets/python.png" alt="Python"></div>
+          <div class="skill"><img src="assets/js.png" alt="JavaScript"></div>
+          <div class="skill"><img src="assets/html.png" alt="HTML"></div>
+          <div class="skill"><img src="assets/django.png" alt="Django"></div>
+          <div class="skill"><img src="assets/fast api.png" alt="FastAPI"></div>
+          <div class="skill"><img src="assets/wireshark.png" alt="Wireshark"></div>
+          <div class="skill"><img src="assets/kalilinux.png" alt="Kali Linux"></div>
+          <div class="skill"><img src="assets/kivy.png" alt="Kivy"></div>
+          <div class="skill"><img src="assets/burp.png" alt="Burp Suite"></div>
+          <div class="skill"><img src="assets/canva.png" alt="Canva"></div>
+        </div>
       </div>
     </section>
+
+    <!-- Resume Download -->
+    <div class="resume-section">
+      <a href="assets/resume.pdf" target="_blank" class="resume-btn">
+        View My Resume
+      </a>
+    </div>
+
+
   </main>
 
   <!-- Footer -->
   <footer class="site-footer">
     <div class="footer-inner">
+
       <div class="footer-left">
         <h3>Contact</h3>
         <p>Email: <a href="mailto:vineetb.work@gmail.com">vineetb.work@gmail.com</a></p>
         <p>Phone: +91 9x6x7 x9x5x</p>
       </div>
+
       <div class="footer-right">
         <h3>Follow</h3>
         <ul class="social">
-          <li><a href="https://github.com/nulltheory23" target="_blank">GitHub</a></li>
-          <li><a href="https://www.linkedin.com/in/vineet-b-819521315" target="_blank">LinkedIn</a></li>
-          <li><a href="https://www.instagram.com/0x_v33n33t" target="_blank">Instagram</a></li>
+          <li><a href="https://github.com/vineet-b23" target="_blank">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/vineet-b-vitchennai/" target="_blank">LinkedIn</a></li>
           <li><a href="https://youtube.com/@thronescript" target="_blank">YouTube</a></li>
         </ul>
       </div>
+
     </div>
+
     <div class="footer-bottom">
-      <p>© 2025 Vineet | All for the glory of Jesus Christ ✝️</p>
+      <p>© 2026 Vineet | Comprehension manifests in Paradox</p>
     </div>
   </footer>
 

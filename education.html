@@ -4,64 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Education | Vineet</title>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-87Y32ZV6W3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+         gtag('js', new Date());
+      gtag('config', 'G-87Y32ZV6W3');
+  </script>
+
   <link rel="icon" type="image/png" href="favicon.png">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
-  <style>
-    /* Base Reset */
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Open Sans', sans-serif; background-color: #0f0f0f; color: #f5f5f5; line-height: 1.5; overflow-x: hidden; }
-    a { color: gold; text-decoration: none; }
-    /* a:hover { text-decoration: underline; } */
 
-    /* Navbar */
-    .topbar { display: flex; justify-content: space-between; align-items: center; padding: 15px 30px; position: sticky; top: 0; background: #111; z-index: 10; }
-    .brand { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 1.5rem; color: gold; letter-spacing: 1px; }
-    .nav { display: flex; gap: 25px; }
-    .nav-link { color: #fff; font-weight: 600; padding: 6px 12px; border-radius: 6px; }
-    .nav-link:hover, .nav-link.active { color: gold; background: rgba(255,255,255,0.05); }
-
-    /* Section padding */
-    .section-pad { padding: 80px 20px; text-align: center; }
-
-    /* Education Section */
-    .education-section h1 { font-family: 'Montserrat', sans-serif; font-size: 2.2rem; color: gold; margin-bottom: 40px; }
-    .edu-card { display: flex; align-items: center; gap: 25px; max-width: 800px; margin: 25px auto; background: #1b1b1b; padding: 25px 30px; border-radius: 15px; text-align: left; transition: 0.3s; }
-    .edu-card:hover { background: #222; transform: translateY(-5px); }
-    .edu-logo { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 2px solid gold; }
-    .edu-details h2 { font-size: 1.3rem; color: #fff; margin-bottom: 6px; }
-    .edu-details p { color: #ccc; font-size: 0.95rem; margin: 3px 0; }
-
-    /* Footer */
-    .site-footer { background: #000; color: #ccc; padding: 30px 20px; margin-top: 50px; }
-    .footer-inner { display: flex; justify-content: space-between; max-width: 1100px; margin: 0 auto; flex-wrap: wrap; gap: 20px; }
-    .footer-left h3, .footer-right h3 { margin-bottom: 8px; font-family: 'Montserrat', sans-serif; color: #fff; }
-    .footer-left p, .footer-right ul li { margin-bottom: 6px; }
-    .footer-right ul { list-style: none; display: flex; gap: 12px; padding-left: 0; }
-    .footer-right ul li a { color: gold; font-weight: 600; }
-    .footer-bottom { text-align: center; margin-top: 15px; color: rgba(255,255,255,0.6); font-size: 0.9rem; }
-
-    /* Responsive */
-    @media (max-width: 900px) {
-      .edu-card { flex-direction: column; text-align: center; }
-      .edu-logo { margin-bottom: 12px; }
-      .footer-inner { flex-direction: column; align-items: center; text-align: center; }
-    }
-
-        .edu-link {
-      text-decoration: none;
-      display: block;
-    }
-
-    .edu-link:hover .edu-card {
-      background: #222;
-      transform: translateY(-5px);
-    }
-
-    .edu-card {
-      cursor: pointer;
-    }
-
-  </style>
+  <!-- GLOBAL CSS -->
+  <link rel="stylesheet" href="css/global.css">
 </head>
 <body>
 
@@ -77,14 +34,13 @@
     </nav>
   </header>
 
-  
   <!-- Education Section -->
   <main>
     <section class="education-section section-pad">
-      <h1>My Education</h1>
+      <h1 style="color: gold;">My Education</h1>
 
-      <div class="edu-card" style="pointer-events: none;">
-        <img src="vit logo.png" alt="College Logo" class="edu-logo">
+      <div class="edu-card">
+        <img src="assets/vit logo.png" alt="College Logo" class="edu-logo">
         <div class="edu-details">
           <h2>M.Tech in Software Engineering</h2>
           <p>VIT University, Chennai</p>
@@ -92,8 +48,8 @@
         </div>
       </div>
 
-      <div class="edu-card" style="pointer-events: none;">
-        <img src="iitm logo.jpg" alt="IITM Logo" class="edu-logo">
+      <div class="edu-card">
+        <img src="assets/iitm logo.jpg" alt="IITM Logo" class="edu-logo">
         <div class="edu-details">
           <h2>B.S. in Data Science and Applications</h2>
           <p>Indian Institute of Technology Madras</p>
@@ -101,9 +57,8 @@
         </div>
       </div>
 
-
-      <div class="edu-card" style="pointer-events: none;">
-        <img src="ebenezer logo.png" alt="School Logo" class="edu-logo">
+      <div class="edu-card">
+        <img src="assets/ebenezer logo.png" alt="School Logo" class="edu-logo">
         <div class="edu-details">
           <h2>High School (Computer Science)</h2>
           <p>Ebenezer Marcus, Pudur</p>
@@ -115,8 +70,7 @@
     </section>
   </main>
 
-
-  <!-- Footer Section -->
+  <!-- Footer -->
   <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-left">
@@ -127,15 +81,14 @@
       <div class="footer-right">
         <h3>Follow</h3>
         <ul class="social">
-          <li><a href="https://github.com/nulltheory23" target="_blank">GitHub</a></li>
-          <li><a href="https://www.linkedin.com/in/vineet-b-819521315" target="_blank">LinkedIn</a></li>
-          <li><a href="https://www.instagram.com/0x_v33n33t" target="_blank">Instagram</a></li>
+          <li><a href="https://github.com/vineet-b23" target="_blank">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/vineet-b-vitchennai/" target="_blank">LinkedIn</a></li>
           <li><a href="https://youtube.com/@thronescript" target="_blank">YouTube</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2025 Vineet | All for the glory of Jesus Christ ✝️</p>
+      <p>© 2026 Vineet | Comprehension manifests in Paradox</p>
     </div>
   </footer>
 

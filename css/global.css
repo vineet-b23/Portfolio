@@ -1,0 +1,373 @@
+/* ===========================
+   Base Reset & Defaults
+=========================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #0f0f0f;
+  color: gold;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+/* ===========================
+   Navbar
+=========================== */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  position: sticky;
+  top: 0;
+  background: #111;
+  z-index: 10;
+}
+
+.brand {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: gold;
+  letter-spacing: 1px;
+}
+
+.nav {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-link {
+  color: #fff;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 6px;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: gold;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* ===========================
+   Section Padding & Titles
+=========================== */
+.section-pad {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.section-pad h1,
+.section-pad h2 {
+  font-family: 'Montserrat', sans-serif;
+  color: rgb(255, 255, 255);
+  margin-bottom: 10px;
+}
+
+.muted {
+  color: #ccc;
+}
+
+/* ===========================
+   About Section
+=========================== */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 28px;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.about-text h2 {
+  font-size: 1.6rem;
+}
+
+.about-tagline {
+  font-weight: 600;
+  color: gold;
+  margin-bottom: 10px;
+}
+
+.about-para {
+  color: #ccc;
+  line-height: 1.6;
+}
+
+.profile-pic.side {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid rgba(255, 255, 255, 0.06);
+}
+
+/* ===========================
+   Skills (Ticker-ready base)
+=========================== */
+.skills {
+  overflow: hidden;
+}
+
+.skills-ticker {
+  max-width: 1100px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.skills-track {
+  display: flex;
+  gap: 20px;
+}
+
+.skill {
+  background: rgba(255, 255, 255, 0.02);
+  padding: 18px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  min-width: 120px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+}
+
+.skill img {
+  max-width: 80%;
+  max-height: 48px;
+  object-fit: contain;
+  opacity: 0.95;
+}
+
+/* ===========================
+   Resume Button
+=========================== */
+.resume-section {
+  text-align: center;
+  margin: 40px 0 80px;
+}
+
+.resume-btn {
+  display: inline;
+  padding: 12px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: gold;
+  color: #111;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.resume-btn:hover {
+  background-color: #f5c400;
+  transform: scale(1.05);
+}
+
+/* ===========================
+   Education Cards
+=========================== */
+.edu-card {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  max-width: 800px;
+  margin: 25px auto;
+  background: #1b1b1b;
+  padding: 25px 30px;
+  border-radius: 15px;
+  text-align: left;
+  transition: 0.3s;
+}
+
+.edu-card:hover {
+  background: #222;
+  transform: translateY(-5px);
+}
+
+.edu-logo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid gold;
+}
+
+.edu-details h2 {
+  font-size: 1.3rem;
+  margin-bottom: 6px;
+}
+
+.edu-details p {
+  color: #bbbbbb;
+  font-size: 0.95rem;
+  margin: 3px 0;
+}
+
+/* ===========================
+   Footer
+=========================== */
+.site-footer {
+  background: #000;
+  color: #ccc;
+  padding: 30px 20px;
+  margin-top: 50px;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-left h3,
+.footer-right h3 {
+  margin-bottom: 8px;
+  font-family: 'Montserrat', sans-serif;
+  color: #fff;
+}
+
+.footer-right ul {
+  list-style: none;
+  display: flex;
+  gap: 12px;
+}
+
+.footer-right ul li a {
+  color: gold;
+  font-weight: 600;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 15px;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
+}
+
+/* ===========================
+   Responsive
+=========================== */
+@media (max-width: 900px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .profile-pic.side {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto;
+  }
+
+  .edu-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+
+/*certificate*/
+
+.certificate-card {
+  background: #111;
+  border: 1px solid black;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.certificate-card h2 {
+  margin-bottom: 6px;
+}
+
+.cert-link {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.cert-link a {
+  color: gold;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.cert-link a:hover {
+  text-decoration: underline;
+}
+
+
+.cert-card {
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+  align-items: center;
+  max-width: 800px;
+  margin: 25px auto;
+  background: #1b1b1b;
+  padding: 25px 30px;
+  border-radius: 16px;
+  transition: 0.3s;
+}
+
+.cert-card:hover {
+  background: #222;
+  transform: translateY(-5px);
+}
+
+
+.edu-details h2 {
+  margin-bottom: 6px;
+}
+
+.edu-action {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.view-btn {
+  padding: 8px 18px;
+  text-align: center;
+  border-radius: 20px;
+  border: 1px solid gold;
+  color: gold;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.view-btn:hover {
+  background: gold;
+  color: black;
+}
+
+.cert-link {
+  margin-top: 30px;
+  text-align: center;
+}

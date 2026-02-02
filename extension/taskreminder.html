@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Reminder App | Vineet</title>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-87Y32ZV6W3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-87Y32ZV6W3');
+    </script>
+
+  <link rel="icon" type="image/png" href="../assets/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/global.css">
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <header class="topbar">
+    <div class="brand">Vineet</div>
+    <nav class="nav">
+      <a href="../index.html" class="nav-link">Home</a>
+      <a href="../education.html" class="nav-link">Education</a>
+      <a href="../projects.html" class="nav-link active">Projects</a>
+      <a href="../achievements.html" class="nav-link">Achievements</a>
+      <a href="../contact.html" class="nav-link">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- Project Intro -->
+    <section class="section-pad">
+      <img
+        src="../assets/taskreminder.png"
+        alt="Task Reminder App Icon"
+        style="width:120px; margin-bottom:20px;"
+      >
+
+      <h1>Task Reminder App</h1>
+
+      <p class="muted" style="max-width: 800px; margin: 0 auto;">
+        A Django-based web application designed to help users manage tasks efficiently
+        with automated reminders. Built during my time at
+        <a href="https://www.wiztechautomationsolutions.in/" target="_blank">
+          Wiztech Automation Solutions
+        </a>,
+        this project focuses on backend automation, clean UI, and real-world usability.
+      </p>
+    </section>
+
+    <!-- Project Description -->
+    <section class="section-pad">
+      <div style="max-width: 900px; margin: 0 auto; text-align: left;">
+
+        <h2>What it does</h2>
+        <p class="muted">
+          Users can create, update, and manage tasks through a clean interface,
+          while reminders are automatically triggered using Django management commands
+          and the Windows Task Scheduler.
+        </p>
+        <br>
+
+        <h2>Key Highlights</h2>
+        <ul class="muted">
+          <li>Full CRUD functionality for task management</li>
+          <li>Automated reminders without third-party services</li>
+          <li>Bootstrap-based responsive UI</li>
+          <li>Clean project structure with proper documentation</li>
+          <li>Real-world automation workflow testing & debugging</li>
+        </ul>
+
+        <p class="muted">
+          This project strengthened my understanding of backend automation,
+          debugging scheduled jobs, and writing production-ready Django applications.
+        </p>
+        <br>
+        
+        <p style="margin-top: 20px;">
+          <a
+            href="https://github.com/vineet-b23/Task-reminder"
+            target="_blank"
+            class="view-btn"
+          >
+            View on GitHub
+          </a>
+        </p>
+
+      </div>
+    </section>
+
+    <!-- Screenshots -->
+    <section class="section-pad">
+      <h2>Screenshots</h2>
+
+      <div
+        style="
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+          gap: 20px;
+          max-width: 1000px;
+          margin: 30px auto 0;
+        "
+      >
+        <img src="../assets/task reminder 1.png" class="lightbox-img" alt="Screenshot 1" style="width:100%; border-radius:12px; cursor:pointer;">
+        <img src="../assets/task reminder 2.png" class="lightbox-img" alt="Screenshot 2" style="width:100%; border-radius:12px; cursor:pointer;">
+        <img src="../assets/task reminder 3.png" class="lightbox-img" alt="Screenshot 3" style="width:100%; border-radius:12px; cursor:pointer;">
+        <img src="../assets/task reminder 4.png" class="lightbox-img" alt="Screenshot 4" style="width:100%; border-radius:12px; cursor:pointer;">
+        <img src="../assets/task reminder 5.jpeg" class="lightbox-img" alt="Screenshot 5" style="width:100%; border-radius:12px; cursor:pointer;">
+      </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div
+      id="lightbox"
+      style="
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,0.9);
+        display: none;
+        align-items: center;
+        justify-content: center;
+        z-index: 999;
+      "
+    >
+      <img
+        src=""
+        alt="Preview"
+        style="max-width: 90%; max-height: 90%; border-radius: 12px;"
+      >
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+
+      <div class="footer-left">
+        <h3>Contact</h3>
+        <p>Email: <a href="mailto:vineetb.work@gmail.com">vineetb.work@gmail.com</a></p>
+        <p>Phone: +91 9x6x7 x9x5x</p>
+      </div>
+
+      <div class="footer-right">
+        <h3>Follow</h3>
+        <ul class="social">
+          <li><a href="https://github.com/vineet-b23" target="_blank">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/vineet-b-vitchennai/" target="_blank">LinkedIn</a></li>
+          <li><a href="https://youtube.com/@thronescript" target="_blank">YouTube</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 Vineet | AComprehension manifests in Paradox</p>
+    </div>
+  </footer>
+
+  <!-- Lightbox Script -->
+  <script>
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = lightbox.querySelector("img");
+    const images = document.querySelectorAll(".lightbox-img");
+
+    images.forEach(img => {
+      img.addEventListener("click", () => {
+        lightboxImg.src = img.src;
+        lightbox.style.display = "flex";
+      });
+    });
+
+    lightbox.addEventListener("click", () => {
+      lightbox.style.display = "none";
+    });
+
+    document.addEventListener("keydown", e => {
+      if (e.key === "Escape") {
+        lightbox.style.display = "none";
+      }
+    });
+  </script>
+
+</body>
+</html>
