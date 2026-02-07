@@ -381,17 +381,26 @@ a {
   .brand {
     width: 100%;
     text-align: center;
-    margin-bottom: 6px;
+    margin-bottom: 8px;
   }
 
   .nav {
     width: 100%;
-    justify-content: center;   /* center nav items */
-    gap: 12px;                 /* tighter spacing */
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;      /* keep ALL items in one row */
+    gap: 10px;
+    overflow-x: auto;       /* prevents breaking if space is tight */
+    scrollbar-width: none;  /* hide scrollbar (Firefox) */
+  }
+
+  .nav::-webkit-scrollbar {
+    display: none;          /* hide scrollbar (Chrome) */
   }
 
   .nav-link {
     font-size: 13px;
     padding: 5px 8px;
+    white-space: nowrap;    /* prevent text breaking */
   }
 }
