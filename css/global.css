@@ -143,12 +143,12 @@ a {
 /* Mobile tweaks */
 @media (max-width: 768px) {
   .skills-grid {
-    grid-template-columns: repeat(3, 1fr); /* 3 per row on smaller screens */
-    gap: 25px;
+    grid-template-columns: repeat(5, 1fr); /* 5 per row */
+    gap: 18px;
   }
 
   .skill img {
-    height: 55px;
+    height: 42px;
   }
 }
 
@@ -374,33 +374,37 @@ a {
 
 
 /* ===========================
-   Navbar Mobile Fix
+   Mobile Navbar — Static Fix
 =========================== */
 @media (max-width: 600px) {
+
+  .topbar {
+    padding: 10px 12px;
+  }
 
   .brand {
     width: 100%;
     text-align: center;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
+    font-size: 1.3rem;
   }
 
   .nav {
     width: 100%;
     display: flex;
-    justify-content: center;
-    flex-wrap: nowrap;      /* keep ALL items in one row */
-    gap: 10px;
-    overflow-x: auto;       /* prevents breaking if space is tight */
-    scrollbar-width: none;  /* hide scrollbar (Firefox) */
-  }
-
-  .nav::-webkit-scrollbar {
-    display: none;          /* hide scrollbar (Chrome) */
+    justify-content: space-between;  /* distribute evenly */
+    align-items: center;
+    flex-wrap: nowrap;               /* keep in ONE line */
+    gap: 4px;                        /* small gap so all fit */
+    overflow: hidden;                /* REMOVE scrolling */
   }
 
   .nav-link {
-    font-size: 13px;
-    padding: 5px 8px;
-    white-space: nowrap;    /* prevent text breaking */
+    flex: 1;                         /* each link takes equal width */
+    text-align: center;
+    font-size: 12px;                 /* shrink text slightly */
+    padding: 6px 2px;                /* reduce padding */
+    white-space: nowrap;
   }
 }
+
