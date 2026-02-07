@@ -27,10 +27,11 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 30px;
+  padding: 15px 20px;
   position: sticky;
   top: 0;
   background: #111;
+  flex-wrap: wrap; 
   z-index: 10;
 }
 
@@ -45,8 +46,9 @@ a {
 .nav {
   display: flex;
   gap: 25px;
+  flex-wrap: wrap;        
+  justify-content: flex-end;
 }
-
 .nav-link {
   color: #fff;
   font-weight: 600;
@@ -116,40 +118,38 @@ a {
 }
 
 /* ===========================
-   Skills (Ticker-ready base)
+   Skills (Static)
 =========================== */
-.skills {
-  overflow: hidden;
-}
-
-.skills-ticker {
-  max-width: 1100px;
-  margin: 0 auto;
-  overflow: hidden;
-}
-
-.skills-track {
-  display: flex;
-  gap: 20px;
-}
-
-.skill {
-  background: rgba(255, 255, 255, 0.02);
-  padding: 18px;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 80px;
-  min-width: 120px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 icons per row */
+  gap: 40px;
+  justify-items: center;
+  margin-top: 25px;
 }
 
 .skill img {
-  max-width: 80%;
-  max-height: 48px;
-  object-fit: contain;
+  height: 50px;   /* bigger, viewable size */
+  width: auto;
   opacity: 0.95;
+  transition: transform 0.3s, filter 0.3s;
+}
+
+.skill img:hover {
+  transform: scale(1.15);
+  filter: drop-shadow(0 0 6px rgba(255, 215, 0, 0.6));
+}
+
+/* Mobile tweaks */
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 per row on smaller screens */
+    gap: 25px;
+  }
+
+  .skill img {
+    height: 55px;
+  }
 }
 
 /* ===========================
@@ -370,4 +370,28 @@ a {
 .cert-link {
   margin-top: 30px;
   text-align: center;
+}
+
+
+/* ===========================
+   Navbar Mobile Fix
+=========================== */
+@media (max-width: 600px) {
+
+  .brand {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 6px;
+  }
+
+  .nav {
+    width: 100%;
+    justify-content: center;   /* center nav items */
+    gap: 12px;                 /* tighter spacing */
+  }
+
+  .nav-link {
+    font-size: 13px;
+    padding: 5px 8px;
+  }
 }

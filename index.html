@@ -88,74 +88,20 @@
 
     <!-- Skills Section -->
     <section class="section-pad skills">
-          <style>
-            /* Skills Ticker Animation */
-            .skills-ticker {
-              overflow: hidden;
-              width: 100%;
-              position: relative;
-              margin-top: 25px;
-            }
-
-            .skills-track {
-              display: flex;
-              gap: 40px;
-              width: max-content;
-              animation: skillsScroll 25s linear infinite;
-            }
-
-            .skill img {
-              height: 55px;
-              width: auto;
-              opacity: 0.95;
-              transition: transform 0.3s, filter 0.3s;
-            }
-
-
-            .skill img:hover {
-              transform: scale(1.15);
-              filter: drop-shadow(0 0 6px rgba(255, 215, 0, 0.6));
-            }
-
-
-            @keyframes skillsScroll {
-              0% {
-                transform: translateX(100%);
-              }
-              100% {
-                transform: translateX(-100%);
-              }
-            }
-
-            /* Mobile tweaks */
-            @media (max-width: 768px) {
-              .skills-track {
-                gap: 25px;
-              }
-
-              .skill img {
-                height: 45px;
-              }
-            }
-          </style>
-
       <h2>Skills</h2>
       <p class="muted">Tools & technologies I work with</p>
 
-      <!-- Ticker wrapper (animation handled in index.css later) -->
-      <div class="skills-ticker">
-        <div class="skills-track">
-          <div class="skill"><img src="assets/python.png" alt="Python"></div>
-          <div class="skill"><img src="assets/js.png" alt="JavaScript"></div>
-          <div class="skill"><img src="assets/html.png" alt="HTML"></div>
-          <div class="skill"><img src="assets/django.png" alt="Django"></div>
-          <div class="skill"><img src="assets/fast api.png" alt="FastAPI"></div>
-          <div class="skill"><img src="assets/wireshark.png" alt="Wireshark"></div>
-          <div class="skill"><img src="assets/kalilinux.png" alt="Kali Linux"></div>
-          <div class="skill"><img src="assets/kivy.png" alt="Kivy"></div>
-          <div class="skill"><img src="assets/burp.png" alt="Burp Suite"></div>
-          <div class="skill"><img src="assets/canva.png" alt="Canva"></div>
-        </div>
+      <div class="skills-grid">
+        <div class="skill"><img src="assets/python.png" alt="Python"></div>
+        <div class="skill"><img src="assets/js.png" alt="JavaScript"></div>
+        <div class="skill"><img src="assets/html.png" alt="HTML"></div>
+        <div class="skill"><img src="assets/django.png" alt="Django"></div>
+        <div class="skill"><img src="assets/fast api.png" alt="FastAPI"></div>
+        <div class="skill"><img src="assets/wireshark.png" alt="Wireshark"></div>
+        <div class="skill"><img src="assets/kalilinux.png" alt="Kali Linux"></div>
+        <div class="skill"><img src="assets/kivy.png" alt="Kivy"></div>
+        <div class="skill"><img src="assets/burp.png" alt="Burp Suite"></div>
+        <div class="skill"><img src="assets/canva.png" alt="Canva"></div>
       </div>
     </section>
 
