@@ -25,14 +25,13 @@ a {
 =========================== */
 .topbar {
   display: flex;
-  gap: 18px;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   padding: 15px 20px;
   position: sticky;
   top: 0;
   background: #111;
-  flex-wrap: nowrap; 
+  flex-wrap: wrap; 
   z-index: 10;
 }
 
@@ -144,22 +143,14 @@ a {
 /* Mobile tweaks */
 @media (max-width: 768px) {
   .skills-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr); /* 3 per row on smaller screens */
     gap: 25px;
-    justify-items: center;
-    justify-content: center;   /* centers last row */
-  }
-
-  .skill {
-    display: flex;
-    justify-content: center;
   }
 
   .skill img {
     height: 55px;
   }
 }
-
 
 /* ===========================
    Resume Button
@@ -387,30 +378,29 @@ a {
 =========================== */
 @media (max-width: 600px) {
 
-  .topbar {
-    flex-direction: column;
-    align-items: center;
-  }
-
   .brand {
     width: 100%;
     text-align: center;
-    margin-bottom: 6px;
+    margin-bottom: 8px;
   }
 
   .nav {
     width: 100%;
     display: flex;
-    justify-content: space-between;  /* evenly spread */
-    flex-wrap: nowrap;
-    gap: 6px;
+    justify-content: center;
+    flex-wrap: nowrap;      /* keep ALL items in one row */
+    gap: 10px;
+    overflow-x: auto;       /* prevents breaking if space is tight */
+    scrollbar-width: none;  /* hide scrollbar (Firefox) */
+  }
+
+  .nav::-webkit-scrollbar {
+    display: none;          /* hide scrollbar (Chrome) */
   }
 
   .nav-link {
-    flex: 1;                 /* equal width for all */
-    text-align: center;
-    font-size: 12.5px;
-    padding: 5px 4px;
-    white-space: nowrap;
+    font-size: 13px;
+    padding: 5px 8px;
+    white-space: nowrap;    /* prevent text breaking */
   }
 }
